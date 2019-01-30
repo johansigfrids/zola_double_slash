@@ -1,0 +1,6 @@
+base_url = "https://test.site/"
+
+languages = [
+    {code = "fi"},
+    {code = "sv"}, 
+]

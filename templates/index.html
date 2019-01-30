@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Double slash</title>
+</head>
+<body>
+    <div>
+        <span>{{section.lang|default(value=config.default_language)}}</span>
+        {% for t in section.translations %}
+            <a href="{{t.permalink|safe}}">{{t.lang|default(value=config.default_language)}}</a>
+        {% endfor %}
+    </div>
+
+    <h1>{{section.title}}</h1>
+    <main>
+        {{section.content|safe}}
+    </main>
+</body>
+</html>
